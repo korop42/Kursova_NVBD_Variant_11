@@ -1,0 +1,16 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="bob.Payroll_LargeDB.sa"
+  DTS:DTSID="{819AFE90-46D3-41B4-B0D6-4650B29008D8}"
+  DTS:CreationName="OLEDB">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectRetryCount="1"
+      DTS:ConnectRetryInterval="5"
+      DTS:ConnectionString="Data Source=bob;User ID=sa;Initial Catalog=Payroll_LargeDB;Provider=SQLOLEDB.1;Persist Security Info=True;Application Name=SSIS-Kursach_SSIS-{819AFE90-46D3-41B4-B0D6-4650B29008D8}bob.Payroll_LargeDB.sa;Auto Translate=False;">
+      <DTS:Password
+        DTS:Name="Password"
+        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAj7v3AfaVYUOf6KDR2uAEAwAAAAACAAAAAAAQZgAAAAEAACAAAAAIThAuga58557Ebmq8QoDKXLkJkiNjM+3Sum44dDf+cAAAAAAOgAAAAAIAACAAAACIfSa+tGJzqyUYmgh/pGYtTko2xb4d+923BWXDHevptHAAAAAbenq5ZXcBBStMMNs34Hzf4Kv3UfbuqzCC1ywDX4uDKh3iRTiyhBpMMu5cBPBkGq27wY/LGwhZScc2t6mjPak5n0JyIjmmAxs08ETnlvn97kutrVfe8btVXjyoeVlvkxV07kbGPT5XT2FlgzLEPG61QAAAAA4GhKs6HiReDSx6vFEYCn+231AMOpx3KIUQ90pP2jU0Y7jCfAwkOy6HSigdrH3sItxIAqsB7wcjMiKoEQRsuqg=</DTS:Password>
+    </DTS:ConnectionManager>
+  </DTS:ObjectData>
+</DTS:ConnectionManager>
