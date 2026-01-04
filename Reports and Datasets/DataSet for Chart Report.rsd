@@ -1,0 +1,232 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SharedDataSet xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/shareddatasetdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSet Name="DataSet2">
+    <Query>
+      <DataSourceReference>DataSource1</DataSourceReference>
+      <CommandText> SELECT NON EMPTY { [Measures].[Amount], [Measures].[Amount YTD], [Measures].[% of Total Accruals] } ON COLUMNS, NON EMPTY { ([Dim Date].[Year].[Year].ALLMEMBERS * [Dim Date].[Month Name].[Month Name].ALLMEMBERS * [Dim Departments].[Dept Name].[Dept Name].ALLMEMBERS * [Dim Date].[Quarter].[Quarter].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_VALUE, MEMBER_UNIQUE_NAME ON ROWS FROM ( SELECT ( { [Dim Departments].[Dept Name].&amp;[Accounting #001010], [Dim Departments].[Dept Name].&amp;[Accounting #002919], [Dim Departments].[Dept Name].&amp;[Accounting #003910], [Dim Departments].[Dept Name].&amp;[Accounting #006261], [Dim Departments].[Dept Name].&amp;[Accounting #006994], [Dim Departments].[Dept Name].&amp;[Accounting #009832] } ) ON COLUMNS FROM ( SELECT ( { [Dim Date].[Month Name].&amp;[7]&amp;[3]&amp;[2016], [Dim Date].[Month Name].&amp;[7]&amp;[3]&amp;[2017], [Dim Date].[Month Name].&amp;[7]&amp;[3]&amp;[2018], [Dim Date].[Month Name].&amp;[7]&amp;[3]&amp;[2019], [Dim Date].[Month Name].&amp;[7]&amp;[3]&amp;[2020], [Dim Date].[Month Name].&amp;[7]&amp;[3]&amp;[2021], [Dim Date].[Month Name].&amp;[7]&amp;[3]&amp;[2022], [Dim Date].[Month Name].&amp;[7]&amp;[3]&amp;[2023], [Dim Date].[Month Name].&amp;[7]&amp;[3]&amp;[2024], [Dim Date].[Month Name].&amp;[7]&amp;[3]&amp;[2025], [Dim Date].[Month Name].&amp;[7]&amp;[3]&amp;[2026] } ) ON COLUMNS FROM ( SELECT ( { [Dim Date].[Quarter].&amp;[3]&amp;[2019] } ) ON COLUMNS FROM [Payroll DW]))) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS</CommandText>
+      <rd:DesignerState>
+        <QueryDefinition xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/AnalysisServices/QueryDefinition">
+          <CommandType>MDX</CommandType>
+          <QuerySpecification xsi:type="MDXQuerySpecification">
+            <Select>
+              <Items>
+                <Item>
+                  <ID xsi:type="Level">
+                    <DimensionName>Dim Date</DimensionName>
+                    <HierarchyName>Year</HierarchyName>
+                    <HierarchyUniqueName>[Dim Date].[Year]</HierarchyUniqueName>
+                    <LevelName>Year</LevelName>
+                    <UniqueName>[Dim Date].[Year].[Year]</UniqueName>
+                  </ID>
+                  <ItemCaption>Year</ItemCaption>
+                  <UniqueName>true</UniqueName>
+                </Item>
+                <Item>
+                  <ID xsi:type="Level">
+                    <DimensionName>Dim Date</DimensionName>
+                    <HierarchyName>Month Name</HierarchyName>
+                    <HierarchyUniqueName>[Dim Date].[Month Name]</HierarchyUniqueName>
+                    <LevelName>Month Name</LevelName>
+                    <UniqueName>[Dim Date].[Month Name].[Month Name]</UniqueName>
+                  </ID>
+                  <ItemCaption>Month Name</ItemCaption>
+                  <UniqueName>true</UniqueName>
+                </Item>
+                <Item>
+                  <ID xsi:type="Level">
+                    <DimensionName>Dim Departments</DimensionName>
+                    <HierarchyName>Dept Name</HierarchyName>
+                    <HierarchyUniqueName>[Dim Departments].[Dept Name]</HierarchyUniqueName>
+                    <LevelName>Dept Name</LevelName>
+                    <UniqueName>[Dim Departments].[Dept Name].[Dept Name]</UniqueName>
+                  </ID>
+                  <ItemCaption>Dept Name</ItemCaption>
+                  <UniqueName>true</UniqueName>
+                </Item>
+                <Item>
+                  <ID xsi:type="Level">
+                    <DimensionName>Dim Date</DimensionName>
+                    <HierarchyName>Quarter</HierarchyName>
+                    <HierarchyUniqueName>[Dim Date].[Quarter]</HierarchyUniqueName>
+                    <LevelName>Quarter</LevelName>
+                    <UniqueName>[Dim Date].[Quarter].[Quarter]</UniqueName>
+                  </ID>
+                  <ItemCaption>Quarter</ItemCaption>
+                  <UniqueName>true</UniqueName>
+                </Item>
+                <Item>
+                  <ID xsi:type="Measure">
+                    <MeasureName>Amount</MeasureName>
+                    <UniqueName>[Measures].[Amount]</UniqueName>
+                  </ID>
+                  <ItemCaption>Amount</ItemCaption>
+                  <BackColor>true</BackColor>
+                  <ForeColor>true</ForeColor>
+                  <FontFamily>true</FontFamily>
+                  <FontSize>true</FontSize>
+                  <FontWeight>true</FontWeight>
+                  <FontStyle>true</FontStyle>
+                  <FontDecoration>true</FontDecoration>
+                  <FormattedValue>true</FormattedValue>
+                  <FormatString>true</FormatString>
+                </Item>
+                <Item>
+                  <ID xsi:type="Measure">
+                    <MeasureName>Amount YTD</MeasureName>
+                    <UniqueName>[Measures].[Amount YTD]</UniqueName>
+                  </ID>
+                  <ItemCaption>Amount YTD</ItemCaption>
+                  <BackColor>true</BackColor>
+                  <ForeColor>true</ForeColor>
+                  <FontFamily>true</FontFamily>
+                  <FontSize>true</FontSize>
+                  <FontWeight>true</FontWeight>
+                  <FontStyle>true</FontStyle>
+                  <FontDecoration>true</FontDecoration>
+                  <FormattedValue>true</FormattedValue>
+                  <FormatString>true</FormatString>
+                </Item>
+                <Item>
+                  <ID xsi:type="Measure">
+                    <MeasureName>% of Total Accruals</MeasureName>
+                    <UniqueName>[Measures].[% of Total Accruals]</UniqueName>
+                  </ID>
+                  <ItemCaption>% of Total Accruals</ItemCaption>
+                  <BackColor>true</BackColor>
+                  <ForeColor>true</ForeColor>
+                  <FontFamily>true</FontFamily>
+                  <FontSize>true</FontSize>
+                  <FontWeight>true</FontWeight>
+                  <FontStyle>true</FontStyle>
+                  <FontDecoration>true</FontDecoration>
+                  <FormattedValue>true</FormattedValue>
+                  <FormatString>true</FormatString>
+                </Item>
+              </Items>
+            </Select>
+            <AutoExecute>false</AutoExecute>
+            <From>Payroll DW</From>
+            <Filter>
+              <FilterItems>
+                <FilterItem>
+                  <HierarchyUniqueName>[Dim Date].[Quarter]</HierarchyUniqueName>
+                  <Condition xsi:type="EqualTo">
+                    <Members>
+                      <Member>
+                        <MemberUniqueName>[Dim Date].[Quarter].&amp;[3]&amp;[2019]</MemberUniqueName>
+                      </Member>
+                    </Members>
+                  </Condition>
+                </FilterItem>
+                <FilterItem>
+                  <HierarchyUniqueName>[Dim Date].[Month Name]</HierarchyUniqueName>
+                  <Condition xsi:type="EqualTo">
+                    <Members>
+                      <Member>
+                        <MemberUniqueName>[Dim Date].[Month Name].&amp;[7]&amp;[3]&amp;[2016]</MemberUniqueName>
+                      </Member>
+                      <Member>
+                        <MemberUniqueName>[Dim Date].[Month Name].&amp;[7]&amp;[3]&amp;[2017]</MemberUniqueName>
+                      </Member>
+                      <Member>
+                        <MemberUniqueName>[Dim Date].[Month Name].&amp;[7]&amp;[3]&amp;[2018]</MemberUniqueName>
+                      </Member>
+                      <Member>
+                        <MemberUniqueName>[Dim Date].[Month Name].&amp;[7]&amp;[3]&amp;[2019]</MemberUniqueName>
+                      </Member>
+                      <Member>
+                        <MemberUniqueName>[Dim Date].[Month Name].&amp;[7]&amp;[3]&amp;[2020]</MemberUniqueName>
+                      </Member>
+                      <Member>
+                        <MemberUniqueName>[Dim Date].[Month Name].&amp;[7]&amp;[3]&amp;[2021]</MemberUniqueName>
+                      </Member>
+                      <Member>
+                        <MemberUniqueName>[Dim Date].[Month Name].&amp;[7]&amp;[3]&amp;[2022]</MemberUniqueName>
+                      </Member>
+                      <Member>
+                        <MemberUniqueName>[Dim Date].[Month Name].&amp;[7]&amp;[3]&amp;[2023]</MemberUniqueName>
+                      </Member>
+                      <Member>
+                        <MemberUniqueName>[Dim Date].[Month Name].&amp;[7]&amp;[3]&amp;[2024]</MemberUniqueName>
+                      </Member>
+                      <Member>
+                        <MemberUniqueName>[Dim Date].[Month Name].&amp;[7]&amp;[3]&amp;[2025]</MemberUniqueName>
+                      </Member>
+                      <Member>
+                        <MemberUniqueName>[Dim Date].[Month Name].&amp;[7]&amp;[3]&amp;[2026]</MemberUniqueName>
+                      </Member>
+                    </Members>
+                  </Condition>
+                </FilterItem>
+                <FilterItem>
+                  <HierarchyUniqueName>[Dim Departments].[Dept Name]</HierarchyUniqueName>
+                  <Condition xsi:type="EqualTo">
+                    <Members>
+                      <Member>
+                        <MemberUniqueName>[Dim Departments].[Dept Name].&amp;[Accounting #001010]</MemberUniqueName>
+                      </Member>
+                      <Member>
+                        <MemberUniqueName>[Dim Departments].[Dept Name].&amp;[Accounting #002919]</MemberUniqueName>
+                      </Member>
+                      <Member>
+                        <MemberUniqueName>[Dim Departments].[Dept Name].&amp;[Accounting #003910]</MemberUniqueName>
+                      </Member>
+                      <Member>
+                        <MemberUniqueName>[Dim Departments].[Dept Name].&amp;[Accounting #006261]</MemberUniqueName>
+                      </Member>
+                      <Member>
+                        <MemberUniqueName>[Dim Departments].[Dept Name].&amp;[Accounting #006994]</MemberUniqueName>
+                      </Member>
+                      <Member>
+                        <MemberUniqueName>[Dim Departments].[Dept Name].&amp;[Accounting #009832]</MemberUniqueName>
+                      </Member>
+                    </Members>
+                  </Condition>
+                </FilterItem>
+              </FilterItems>
+            </Filter>
+            <Calculations />
+            <Aggregates />
+            <QueryProperties>
+              <IncludeMemberValue>true</IncludeMemberValue>
+            </QueryProperties>
+          </QuerySpecification>
+          <Query>
+            <Statement> SELECT NON EMPTY { [Measures].[Amount], [Measures].[Amount YTD], [Measures].[% of Total Accruals] } ON COLUMNS, NON EMPTY { ([Dim Date].[Year].[Year].ALLMEMBERS * [Dim Date].[Month Name].[Month Name].ALLMEMBERS * [Dim Departments].[Dept Name].[Dept Name].ALLMEMBERS * [Dim Date].[Quarter].[Quarter].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_VALUE, MEMBER_UNIQUE_NAME ON ROWS FROM ( SELECT ( { [Dim Departments].[Dept Name].&amp;[Accounting #001010], [Dim Departments].[Dept Name].&amp;[Accounting #002919], [Dim Departments].[Dept Name].&amp;[Accounting #003910], [Dim Departments].[Dept Name].&amp;[Accounting #006261], [Dim Departments].[Dept Name].&amp;[Accounting #006994], [Dim Departments].[Dept Name].&amp;[Accounting #009832] } ) ON COLUMNS FROM ( SELECT ( { [Dim Date].[Month Name].&amp;[7]&amp;[3]&amp;[2016], [Dim Date].[Month Name].&amp;[7]&amp;[3]&amp;[2017], [Dim Date].[Month Name].&amp;[7]&amp;[3]&amp;[2018], [Dim Date].[Month Name].&amp;[7]&amp;[3]&amp;[2019], [Dim Date].[Month Name].&amp;[7]&amp;[3]&amp;[2020], [Dim Date].[Month Name].&amp;[7]&amp;[3]&amp;[2021], [Dim Date].[Month Name].&amp;[7]&amp;[3]&amp;[2022], [Dim Date].[Month Name].&amp;[7]&amp;[3]&amp;[2023], [Dim Date].[Month Name].&amp;[7]&amp;[3]&amp;[2024], [Dim Date].[Month Name].&amp;[7]&amp;[3]&amp;[2025], [Dim Date].[Month Name].&amp;[7]&amp;[3]&amp;[2026] } ) ON COLUMNS FROM ( SELECT ( { [Dim Date].[Quarter].&amp;[3]&amp;[2019] } ) ON COLUMNS FROM [Payroll DW]))) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS</Statement>
+            <ParameterDefinitions />
+          </Query>
+        </QueryDefinition>
+      </rd:DesignerState>
+    </Query>
+    <Fields>
+      <Field Name="Year">
+        <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="Level" UniqueName="[Dim Date].[Year].[Year]" /&gt;</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Month_Name">
+        <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="Level" UniqueName="[Dim Date].[Month Name].[Month Name]" /&gt;</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Dept_Name">
+        <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="Level" UniqueName="[Dim Departments].[Dept Name].[Dept Name]" /&gt;</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Quarter">
+        <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="Level" UniqueName="[Dim Date].[Quarter].[Quarter]" /&gt;</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Amount">
+        <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="Measure" UniqueName="[Measures].[Amount]" /&gt;</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="Amount_YTD">
+        <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="Measure" UniqueName="[Measures].[Amount YTD]" /&gt;</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="ID__of_Total_Accruals">
+        <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="Measure" UniqueName="[Measures].[% of Total Accruals]" /&gt;</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+    </Fields>
+  </DataSet>
+</SharedDataSet>
