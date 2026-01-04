@@ -1,0 +1,89 @@
+﻿<DeploymentSnapshot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0">
+  <Target>
+    <Database>Kursach_SSAS</Database>
+    <Server>BOB</Server>
+    <ConnectionString>Data Source=BOB;Timeout=0</ConnectionString>
+  </Target>
+  <Options>
+    <TransactionalDeployment>false</TransactionalDeployment>
+    <PartitionDeployment>DeployPartitions</PartitionDeployment>
+    <RoleDeployment>DeployRolesRetainMembers</RoleDeployment>
+    <ProcessingOption>Default</ProcessingOption>
+    <OutputScript></OutputScript>
+    <ImpactAnalysisFile></ImpactAnalysisFile>
+    <ConfigurationSettingsDeployment>Deploy</ConfigurationSettingsDeployment>
+    <OptimizationSettingsDeployment>Deploy</OptimizationSettingsDeployment>
+    <WriteBackTableCreation>UseExisting</WriteBackTableCreation>
+  </Options>
+  <Snapshot>
+    <ObjectSnapshots>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.RelationalDataSource</Type>
+        <TimeStamp>PpaA0POyV09Dy2l3wo8Xv7ZR+T4=04.01.2026 11:12:2204.01.2026 11:12:22</TimeStamp>
+        <ID>
+          <String>Payroll DW</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.DataSourceView</Type>
+        <TimeStamp>9ODRBckzFRnOlAaZigbRmCB3kiE=04.01.2026 11:18:5704.01.2026 11:13:26</TimeStamp>
+        <ID>
+          <String>Payroll DW</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>UaVLc/YcUREPkKpXBx7WhLsJE2o=04.01.2026 14:39:0104.01.2026 11:18:57</TimeStamp>
+        <ID>
+          <String>Dim Date</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>mt9I2AfYgKpSPpctN8nDk0jQCqw=04.01.2026 12:08:0704.01.2026 11:20:53</TimeStamp>
+        <ID>
+          <String>Dim Positions</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>BkQg0JC5jKM/9+qD6AkABbERF40=04.01.2026 12:08:0704.01.2026 11:20:53</TimeStamp>
+        <ID>
+          <String>Dim Departments</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>0JO5iG2iO922/YyaiHpVFLqurRo=04.01.2026 12:08:0704.01.2026 11:20:53</TimeStamp>
+        <ID>
+          <String>Dim Employees</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>fcdY1IJzzAzXJAhHiwDb3XAJ/qk=04.01.2026 12:08:0704.01.2026 11:20:53</TimeStamp>
+        <ID>
+          <String>Dim Activity</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Cube</Type>
+        <TimeStamp>wRnhHqhqjv52iWaKVO+7fIFb8ng=04.01.2026 17:09:5004.01.2026 11:20:53hh4sFXQKhY+mkDojqRqljy54N8g=04.01.2026 14:11:1404.01.2026 11:20:53</TimeStamp>
+        <ID>
+          <String>Payroll DW</String>
+        </ID>
+      </ObjectSnapshot>
+    </ObjectSnapshots>
+    <DatabaseSnapshot>
+      <Type>Microsoft.AnalysisServices.Database</Type>
+      <TimeStamp>bdfPmNYTzkwWBpulfXEiq5KmIaU=04.01.2026 11:09:4404.01.2026 11:09:44</TimeStamp>
+      <ID>
+        <String>Kursach_SSAS</String>
+      </ID>
+    </DatabaseSnapshot>
+    <Granularity>Coarse</Granularity>
+  </Snapshot>
+  <AssemblyLocations />
+  <ProcessingComplete>true</ProcessingComplete>
+  <LastDeployed>2026-01-04T15:09:53.546667Z</LastDeployed>
+</DeploymentSnapshot>
